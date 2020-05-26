@@ -71,3 +71,90 @@ arr = np.array([1, 2, 3, 4, 5, 6, 7])
 print(arr[1:5])
 
 print(arr[:4])
+
+# Negative Slicing
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[-3:-1])
+
+# STEP
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5:2])
+print(arr[1:5:4])
+print(arr[1:6:3])
+print(arr[::2])
+
+# Slicing 2-D Arrays
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[1, 1:4])
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[0:2, 1:4])
+
+# Data Types in NumPy
+arr = np.array([1, 2, 3, 4])
+
+print(arr.dtype)
+
+arr = np.array(['apple', 'banana', 'cherry'])
+
+print(arr.dtype)
+
+# Creating Arrays With a Defined Data Type
+arr = np.array([1, 2, 3, 4], dtype='S')
+
+print(arr)
+print(arr.dtype)
+
+arr = np.array([1, 2, 3, 4], dtype='i4')
+
+print(arr)
+print(arr.dtype)
+
+
+# Converting Data Type on Existing Arrays
+arr = np.array([1.1, 2.1, 3.1])
+
+print(arr)
+print(arr.dtype)
+
+
+newarr = arr.astype('i')
+
+print(newarr)
+print(newarr.dtype)
+
+arr = np.array([1, 0, 3])
+
+newarr = arr.astype(bool)
+
+print(newarr)
+print(newarr.dtype)
+
+# NumPy Array Copy vs View
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.copy()
+arr[0] = 42
+
+print(arr)
+print(x)
+
+# Make Changes in the VIEW:
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.view()
+x[0] = 31
+
+print(arr)
+print(x)
+
+# Check if Array Owns it's Data
+arr = np.array([1, 2, 3, 4, 5])
+
+x = arr.copy()
+y = arr.view()
+
+print(x.base)
+print(y.base)
