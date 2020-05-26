@@ -1,6 +1,7 @@
 # NumPy Project by ChisoftMedia
 import numpy
 import numpy as np
+import matplotlib.pyplot as plt
 
 arr = numpy.array([1,2,3,4,5])
 
@@ -158,3 +159,9 @@ y = arr.view()
 
 print(x.base)
 print(y.base)
+
+# Histogram
+x = numpy.random.uniform(0.0, 5.0, 550)
+
+plt.hist(x, 10)
+plt.show()
