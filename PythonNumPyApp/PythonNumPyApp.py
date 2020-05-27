@@ -161,7 +161,197 @@ print(x.base)
 print(y.base)
 
 # Histogram
-x = numpy.random.uniform(0.0, 5.0, 550)
+# x = numpy.random.uniform(0.0, 5.0, 550)
 
-plt.hist(x, 10)
-plt.show()
+# plt.hist(x, 10)
+# plt.show()
+
+# Get the Shape of an Array
+arr = np.array(([[1,2,3,4],[5,6,7,8]]))
+
+print(arr.shape)
+
+arr = np.array([1, 2, 3, 4], ndmin=5)
+
+print(arr)
+print('shape of array :', arr.shape)
+
+# NumPy Array Reshaping
+# Reshape From 1-D to 2-D
+arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+
+newarr = arr.reshape(4, 3)
+
+print(newarr)
+print(newarr.shape)
+
+# Reshape From 1-D to 3-D
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+newarr = arr.reshape(2, 3, 2)
+
+print(newarr)
+
+# Returns Copy or View
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+print(arr.reshape(2,4).base)
+
+# Flattening the arrays
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+newarr = arr.reshape(-1)
+
+print(newarr)
+
+# NumPy Array Iterating
+arr = np.array([1, 2, 3])
+
+for x in arr:
+  print(x)
+
+
+# Iterating 2-D Arrays
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+for x in arr:
+  print(x)
+
+for x in arr:
+  for y in x:
+    print(y)
+
+
+# Iterating 3-D Arrays
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+for x in arr:
+  print(x)
+
+for x in arr:
+  for y in x:
+    for z in y:
+      print(z)
+
+
+# Iterating Arrays Using nditer()
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+for x in np.nditer(arr):
+  print(x)
+
+for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+  print(x)
+
+for x in np.nditer(arr[:, ::2]):
+  print(x)
+
+# Enumerated Iteration Using ndenumerate()
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+  
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+
+print()  
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12]])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+
+print()
+arr = np.array([[[1, 2, 3, 4], [5, 6, 7, 8]], [[9,10,11,12], [13,14,15,16]]])
+
+print()
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+
+
+# Joining NumPy Arrays
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2))
+
+print(arr)
+
+arr2 = np.concatenate((arr, arr))
+
+print(arr2)
+
+# Joining Arrays Using Stack Functions
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.stack((arr1, arr2), axis=1)
+
+print(arr)
+print()
+
+arr = np.hstack((arr1, arr2))
+
+print(arr)
+# Joining Arrays Using Stack Functions
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.stack((arr1, arr2), axis=1)
+
+print(arr)
+
+print()
+
+arr = np.hstack((arr1, arr2))
+
+print(arr)
+print()
+
+arr = np.vstack((arr1, arr2))
+
+print(arr)
+
+print()
+
+arr = np.dstack((arr1, arr2))
+
+print(arr)
+
+# Splitting NumPy Arrays
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 3)
+
+print(newarr)
+
+newarr = np.array_split(arr, 6)
+
+print(newarr)
+
+# Split Into Arrays
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 3)
+
+print(newarr[0])
+print(newarr[1])
+print(newarr[2])
+
+# Splitting 2-D Arrays
+arr = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+
+newarr = np.array_split(arr, 3)
+
+print(newarr)
+
+
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+newarr = np.array_split(arr, 3)
+
+print(newarr)
