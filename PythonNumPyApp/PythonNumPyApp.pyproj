@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>79ba77ed-c1ea-45ba-a5f5-1fb5ec9cca2c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RandomDataDistribution.py</StartupFile>
+    <StartupFile>RandomPermutations.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,9 @@
     </Compile>
     <Compile Include="PythonNumPyApp.py" />
     <Compile Include="RandomDataDistribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RandomPermutations.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
