@@ -355,3 +355,127 @@ arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16
 newarr = np.array_split(arr, 3)
 
 print(newarr)
+
+# Searching Arrays
+arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+x = np.where(arr == 4)
+
+print(x)
+
+x = np.where(arr%2 == 0)
+
+print(x)
+
+x = np.where(arr%2 != 0)
+
+print(x)
+
+# Search Sorted
+arr = np.array([1, 2, 3, 4, 6, 7, 8, 9,10])
+x = np.searchsorted(arr, 10)
+
+print(x)
+print()
+x = np.searchsorted(arr, 1)
+print(x)
+print()
+x = np.where(arr%2 != 0)
+
+print(x)
+print()
+x = np.where(arr%2 == 0)
+
+print(x)
+print()
+x = np.searchsorted(arr, 7, side='right')
+
+print(x)
+
+# NumPy Sorting Arrays
+
+print(np.sort(arr))
+print()
+
+arr4 = np.array(['banana', 'cherry', 'apple', 'orange', 'mango'])
+
+print(np.sort(arr4))
+print()
+
+# Sorting a 2-D Array
+arr = np.array([[3, 2, 4], [5, 0, 1]])
+
+print(np.sort(arr))
+
+# NumPy Filter Array
+arr = np.array([41, 42, 43, 44, 45, 46, 47, 48])
+x = [True, False, True, False, False, True, True, False]
+newarr = arr[x]
+
+print(newarr)
+print(np.sort(x))
+print(np.sort(arr))
+
+
+
+filter_arr = []
+for value in arr:
+    if value >= 45:
+        filter_arr.append(True)
+    else:
+        filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+print()
+
+
+# Create an empty list
+filter_arr = []
+for element in arr:
+  # if the element is completely divisble by 2, set the value to True, otherwise False
+  if element % 2 == 0:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+print()
+
+# Create an empty list
+filter_arr = []
+for element in arr:
+  # if the element is completely not divisble by 2, set the value to True, otherwise False
+  if element % 2 != 0:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+
+# Creating Filter Directly From Array
+arr = np.array([31,32,34,36,38,40,42,21,31,33,35,23,24,25,0,5])
+
+filter_arr = arr > 20
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+print(np.sort(newarr))
+print()
+
+filter_arr = arr % 2 == 0
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+print(np.sort(newarr))
