@@ -27,6 +27,9 @@
     <Compile Include="LogisticDistribution.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MultinomialDistribution.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="NormalGaussianDistribution.py">
       <SubType>Code</SubType>
     </Compile>
