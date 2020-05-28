@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>79ba77ed-c1ea-45ba-a5f5-1fb5ec9cca2c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ExponentialDistribution.py</StartupFile>
+    <StartupFile>RayleighDistribution.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -53,6 +53,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RandomPermutations.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayleighDistribution.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UniformDistribution.py">
