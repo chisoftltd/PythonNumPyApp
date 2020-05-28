@@ -42,6 +42,9 @@
     <Compile Include="NumPyRandom.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Pareto Distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PoissonDistribution.py">
       <SubType>Code</SubType>
     </Compile>
